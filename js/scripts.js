@@ -5,10 +5,9 @@
 */
 //
 // Scripts
-// 
+//
 
 window.addEventListener('DOMContentLoaded', event => {
-
     // Activate Bootstrap scrollspy on the main nav element
     const sideNav = document.body.querySelector('#sideNav');
     if (sideNav) {
@@ -31,4 +30,26 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    // Initialize tooltips
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl, {
+            popperConfig(defaultBsPopperConfig) {
+                return {
+                    ...defaultBsPopperConfig,
+                    modifiers: defaultBsPopperConfig.modifiers.map(modifier => {
+                        if (modifier.name === 'offset') {
+                            return {
+                                ...modifier,
+                                options: {
+                                    offset: [0, -10]
+                                }
+                            }
+                        }
+                        return modifier;
+                    })
+                }
+            }
+        })
+    });
 });
