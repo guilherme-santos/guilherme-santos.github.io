@@ -1,6 +1,6 @@
 # Guilherme Santos - Personal Website
 
-This repository contains the source code for my personal website and resume, hosted at [guilherme-santos.github.io](https://guilherme-santos.github.io).
+This repository contains the source code for my personal website and resume, hosted at [guilherme.giox.tech](https://guilherme.giox.tech).
 
 ## Overview
 
@@ -35,7 +35,7 @@ To run this site locally:
 
 ## Deployment
 
-The site is automatically deployed to GitHub Pages when changes are pushed to the main branch.
+The site is automatically deployed to GitHub Pages when changes are pushed to the master branch.
 
 ## License
 
